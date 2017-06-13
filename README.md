@@ -61,7 +61,7 @@ The remainder of this document contains a tutorial on creating a React app (usin
 
     ```
     $ cd react-gh-pages
-    $ npm install --save-dev gh-pages
+    $ npm install gh-pages --save-dev
     ```
     
     * The commands shown in the following steps can all be issued from within the app's folder.
