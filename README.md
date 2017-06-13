@@ -2,11 +2,11 @@
 
 # Introduction
 
-Today, I deployed a React app to GitHub Pages. You can visit the deployed app, at [https://gitname.github.io/react-gh-pages/](https://gitname.github.io/react-gh-pages/).
+In this tutorial, I'll show you how I deployed a React app--which I created using `create-react-app`--to GitHub Pages.
 
-This repository contains the files involved in that endeavor. Specifically, it contains the source code files (e.g. `App.js`, `index.js`, `package.json`, and the `README.md` document you're reading now) and the files that consitute a *build* of the app.
+You can visit the deployed app, at [https://gitname.github.io/react-gh-pages/](https://gitname.github.io/react-gh-pages/).
 
-The source code files are stored in this repository's `master` branch, while the files that constitute the *build* are stored in this repository's `gh-pages` branch.
+This repository contains the files related to the app. The `master` branch contains the app's source code (the code the app's developers edit), and the `gh-pages` branch contains a *built* version of the app (i.e. the code that GitHub Pages serves to the app's visitors).
 
 The remainder of this document contains a tutorial on creating a React app (using `create-react-app`) and deploying that app to GitHub Pages.
 
