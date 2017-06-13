@@ -52,7 +52,7 @@ The remainder of this document contains a tutorial on creating a React app (usin
     ```
     
     * This is the app you will deploy to GitHub Pages in step 7.
-    * I opted to give the app the same name as my GitHub repository (i.e. `react-gh-pages`). However, you can name them differently from one another.
+    * I opted to give the app the same name as my GitHub repository (i.e. `react-gh-pages`). However, you can name them differently from one another (e.g. you can name your app `app-123` and your GitHub Repository `repo-456`).
     * This will create a new folder named `react-gh-pages` (or whatever you named your app) on your computer.
 
 3. **Install the `gh-pages` package as a "dev-dependency" of the app.** (1 minute)
