@@ -40,12 +40,12 @@ The remainder of this document contains a tutorial on creating a React app (usin
 
 ## Procedure
 
-1. Create an empty repository on GitHub. (2 minutes)
+1. **Create an empty repository on GitHub.** (2 minutes)
 
     * For this tutorial, I'll create a repository named `react-gh-pages`
-    * By empty, I mean *without* a `README.me` file, a `.gitignore` file, a `LICENSE` file, or any other files.
+    * By empty, I mean *without* a `README.md` file, a `.gitignore` file, a `LICENSE` file, or any other files.
 
-2. Create a new React app on your development machine. (5 minutes)
+2. **Create a new React app on your development machine.** (5 minutes)
 
     ```sh
     $ create-react-app react-gh-pages
@@ -56,14 +56,14 @@ The remainder of this document contains a tutorial on creating a React app (usin
     * This will create a new folder named `react-gh-pages` on your development machine (or whatever you named your app).
     * This command will take approximately 5 minutes to run (or more/less, depending upon the enthusiasm of your computer).
 
-3. Install the `gh-pages` package as a *dev-dependency* of that React app. (1 minute)
+3. **Install the `gh-pages` package as a *dev-dependency* of that React app.** (1 minute)
 
     ```
     $ cd react-gh-pages
     $ npm install --save-dev gh-pages
     ```
 
-4. Edit the app's `package.json` file to work with GitHub Pages. (3 minutes)
+4. **Edit the app's `package.json` file to work with GitHub Pages.** (3 minutes)
 
     * At the top level, add a `homepage` field. Define its value to be the string `http://{username}.github.io/{repo-name}`, where `{username}` is your GitHub username, and `{repo-name}` is the name of the GitHub repository you created in step 1. Since my GitHub username is `gitname` and the name of my GitHub repository is `react-gh-pages`, I added the following:
     
@@ -82,14 +82,14 @@ The remainder of this document contains a tutorial on creating a React app (usin
     }
     ```
 
-5. Create a git repository in the app folder. (1 minute)
+5. **Create a git repository in the app folder.** (1 minute)
 
     ```
     $ git init
     Initialized empty Git repository in C:/path/to/react-gh-pages/.git/
     ```
 
-6. Add the GitHub repository as a *remote* in your local git repository. (1 minute)
+6. **Add the GitHub repository as a *remote* in your local git repository.** (1 minute)
 
     ```
     $ git remote add origin https://github.com/gitname/react-gh-pages.git
@@ -98,7 +98,7 @@ The remainder of this document contains a tutorial on creating a React app (usin
     * This will make it so the `gh-pages` package knows where you want it to deploy your app.
     * It will also make it so git knows where you want it to push your source code (i.e. the commits on your `master` branch).
 
-7. Generate a *production build* of your app, and deploy it to GitHub Pages. (2 minutes)
+7. **Generate a *production build* of your app, and deploy it to GitHub Pages.** (2 minutes)
 
     ```
     $ npm run deploy
@@ -107,7 +107,7 @@ The remainder of this document contains a tutorial on creating a React app (usin
     * That's it! Your app is now accessible at the URL you specific in step 4. In my case, my app is accessible at: https://gitname.github.io/react-gh-pages/
     * I recommend exploring the GitHub repository at this point. When I explored it, I noticed that, although a `master` branch did not exist, a `gh-pages` branch did exist. I noticed the latter contained the *built* app code, as opposed to the source code.
 
-8. Optionally, commit your source code to the master branch and push it to GitHub.
+8. **Optionally, commit your source code to the master branch and push it to GitHub.** (1 minute)
 
     ```
     $ git add .
