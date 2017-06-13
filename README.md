@@ -36,7 +36,7 @@ The remainder of this document contains a tutorial on creating a React app (usin
 
     In the case of `create-react-app`, you can either install it globally (i.e. `$ npm install -g create-react-app`) or install it locally (i.e. `$ npm install create-react-app`). If you choose the latter, you will have to specify its path whenever you invoke it (e.g. `path/to/node_modules/.bin/create-react-app`).
 
-4. A GitHub account. :octocat:
+4. A [GitHub](https://www.github.com) account. :octocat:
 
 ## Procedure
 
@@ -127,5 +127,5 @@ The remainder of this document contains a tutorial on creating a React app (usin
 # Notes
 
 * I created this React app using [`create-react-app`](https://github.com/facebookincubator/create-react-app). By default, apps created using `create-react-app` have a README.md file that looks like [this](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md). Indeed, the README.md file you're now reading originally looked like that. I have since changed it to look the way it looks today.
-* Special thanks to GitHub, Inc., for providing us this awesome means for hosting content and sharing information.
-* And now, time to turn the boilerplate `create-react-app` code into something unique!
+* Special thanks to GitHub, Inc., for providing us with the GitHub Pages hosting functionality at no extra charge.
+* And now, time to turn the default `create-react-app` code into something unique!
