@@ -105,7 +105,7 @@ The remainder of this document contains a tutorial on creating a React app (usin
     $ npm run deploy
     ```
     
-    * That's it! Your app is now accessible at the URL you specific in step 4.
+    * That's it! Your app is now accessible at the URL you specified in step 4.
     * In my case, my app is now accessible at: https://gitname.github.io/react-gh-pages/
     * I recommend exploring the GitHub repository at this point. When I explored it, I noticed that, although a `master` branch did not exist, a `gh-pages` branch did exist. I noticed the latter contained the *built* app code, as opposed to the app's source code.
 
