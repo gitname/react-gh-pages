@@ -38,7 +38,14 @@ The remainder of this document contains a tutorial on creating a React app (usin
 
     In the case of `create-react-app`, you can either install it globally (i.e. `$ npm install -g create-react-app`) or install it locally (i.e. `$ npm install create-react-app`). If you choose the latter, you will have to specify its path whenever you invoke it (e.g. `path/to/node_modules/.bin/create-react-app`).
 
-4. A [GitHub](https://www.github.com) account. :octocat:
+4. (**Optional**) An adequate version of [`sed`](http://www.gnu.org/software/sed/) is installed. Here's the adequate version I use:
+
+   ```sh
+   $ sed --version
+   sed (GNU sed) 4.4
+   ```
+
+5. A [GitHub](https://www.github.com) account. :octocat:
 
 ## Procedure
 
@@ -84,7 +91,15 @@ The remainder of this document contains a tutorial on creating a React app (usin
       "deploy": "gh-pages -d build"
     }
     ```
-
+    
+    * **Shortcut:** Instead of adding those properties using a text editor; if I have `sed` installed on my system, I can add the properties by issuing the following shell commands:
+    
+    ```sh
+    $ sed -i '5i\  "homepage": "http://gitname.github.io/react-gh-pages",' ./package.json
+    $ sed -i '15i\    "predeploy": "npm run build",' ./package.json
+    $ sed -i '16i\    "deploy": "gh-pages -d build",' ./package.json
+    ```
+    
 5. **Create a git repository in the app's folder.** (1 minute)
 
     ```
