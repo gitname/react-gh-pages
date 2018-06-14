@@ -92,6 +92,8 @@ The remainder of this document contains a tutorial on creating a React app (usin
     }
     ```
     
+    * **Note*** Make sure that you have added user.name and user.email in git config, otherwise `npm run deploy` will not work.
+    
     * **Shortcut:** Instead of adding those properties using a text editor; if I have `sed` installed on my system, I can add the properties by issuing the following shell commands:
     
     ```sh
