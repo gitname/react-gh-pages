@@ -47,6 +47,8 @@ The remainder of this document contains a tutorial on creating a React app (usin
 
 5. A [GitHub](https://www.github.com) account. :octocat:
 
+6. A command-line Git client [setup according to GitHub](https://help.github.com/articles/set-up-git/).
+
 ## Procedure
 
 1. **Create an *empty* repository on GitHub.** (2 minutes)
@@ -91,8 +93,6 @@ The remainder of this document contains a tutorial on creating a React app (usin
       "deploy": "gh-pages -d build"
     }
     ```
-    
-    * **Note*** Make sure that you have added user.name and user.email in git config, otherwise `npm run deploy` will not work.
     
     * **Shortcut:** Instead of adding those properties using a text editor; if I have `sed` installed on my system, I can add the properties by issuing the following shell commands:
     
