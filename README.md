@@ -47,6 +47,8 @@ The remainder of this document contains a tutorial on creating a React app (usin
 
 5. A [GitHub](https://www.github.com) account. :octocat:
 
+6. A command-line Git client [setup according to GitHub](https://help.github.com/articles/set-up-git/).
+
 ## Procedure
 
 1. **Create an *empty* repository on GitHub.** (2 minutes)
