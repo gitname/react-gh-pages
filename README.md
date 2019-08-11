@@ -141,7 +141,7 @@ The remainder of this document contains a tutorial on creating a React app (usin
 
 # References
 
-1. [Facebook's tutorial on deploying a React app to GitHub Pages](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#github-pages)
+1. [Facebook's tutorial on deploying a React app to GitHub Pages](https://facebook.github.io/create-react-app/docs/deployment#github-pages-https-pagesgithubcom)
 
 # Notes
 
