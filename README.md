@@ -93,6 +93,7 @@ The remainder of this document contains a tutorial on creating a React app (usin
       "deploy": "gh-pages -d build"
     }
     ```
+    * **Building on master:** If you prefer to build GH-Pages on master, change `gh-pages -d build`to `gh-pages -d build -b master` 
     
     * **Shortcut:** Instead of adding those properties using a text editor; if I have `sed` installed on my system, I can add the properties by issuing the following shell commands:
     
