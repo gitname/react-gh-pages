@@ -77,11 +77,14 @@ The remainder of this document contains a tutorial on creating a React app (usin
 
 4. **Add some properties to the app's `package.json` file.** (3 minutes)
 
-    * At the top level, add a `homepage` property. Define its value to be the string `http://{username}.github.io/{repo-name}`, where `{username}` is your GitHub username, and `{repo-name}` is the name of the GitHub repository you created in step 1. Since my GitHub username is `gitname` and the name of my GitHub repository is `react-gh-pages`, I added the following property:
+    * At the top level, add a `homepage` property. Define its value to be the string `http://{username}.github.io/{repo-name}`, where `{username}` is your GitHub username, and `{repo-name}` is the name of the GitHub repository you created in step 1. Since my GitHub username is `gitname` and the name of my GitHub repository is `react-gh-pages`, I added the following homepage property:
     
     ```js
-    //...
-    "homepage": "http://gitname.github.io/react-gh-pages"
+    {
+        "name": ...
+        "version": ... 
+        "homepage": "http://gitname.github.io/react-gh-pages"
+
     ```
     
     * In the existing `scripts` property, add a `predeploy` property and a `deploy` property, each having the values shown below:
