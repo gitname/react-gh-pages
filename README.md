@@ -71,6 +71,8 @@ The remainder of this document contains a tutorial on creating a React app (usin
     ```
     $ cd react-gh-pages
     $ npm install gh-pages --save-dev
+    or
+    $ yarn add gh-pages --dev
     ```
     
     * The commands shown in the following steps can all be issued from within the app's folder.
@@ -99,6 +101,8 @@ The remainder of this document contains a tutorial on creating a React app (usin
     ```sh
     $ sed -i '5i\  "homepage": "http://gitname.github.io/react-gh-pages",' ./package.json
     $ sed -i '15i\    "predeploy": "npm run build",' ./package.json
+    or 
+    $ sed -i '15i\    "predeploy": "yarn build",' ./package.json
     $ sed -i '16i\    "deploy": "gh-pages -d build",' ./package.json
     ```
     
