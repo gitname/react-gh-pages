@@ -133,7 +133,7 @@ The remainder of this document contains a tutorial on creating a React app (usin
     ```
     $ git add .
     $ git commit -m "Create a React app and publish it to GitHub Pages"
-    $ git push origin master
+    $ git push origin main
     ```
 
     * I recommend exploring the GitHub repository once again at this point. When I did that, I noticed that a `master` branch now existed, and it contained the app's source code.
