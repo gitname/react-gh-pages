@@ -59,7 +59,7 @@ The remainder of this document contains a tutorial on creating a React app (usin
 2. **Create a new React app on your computer.** (5 minutes)
 
     ```sh
-    $ create-react-app react-gh-pages
+    $ npx create-react-app react-gh-pages
     ```
     
     * This is the app you will deploy to GitHub Pages in step 7.
