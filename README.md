@@ -100,7 +100,7 @@ The remainder of this document contains a tutorial on creating a React app (usin
     
         >**Example:**  Since my GitHub username is `gitname` and the name of the GitHub repository I created in step 1 is `my-github-repo`, I would issue the command: `$ git remote add origin https://github.com/gitname/my-github-repo.git`
 
-        > _Note:_ This URL will be used by both Git and the `gh-pages` package. Git will, as always, use it to determine where to push your source code when you run `$ git push`. The [`gh-pages`](https://github.com/tschaub/gh-pages#command-line-utility) package will use it to determine where to upload the _built_ app code during the deployment process.
+        > _Note:_ This URL will be used by both Git and the `gh-pages` package. Git will, as always, use it to determine where to push your source code when you run `$ git push`. The [`gh-pages`](https://github.com/tschaub/gh-pages#command-line-utility) package will use it to determine where to upload the _built_ app files during the deployment process.
 
 7. **Generate a *production build* of your app, and deploy it to GitHub Pages.** (2 minutes)
 
