@@ -1,6 +1,7 @@
 # Deploying a React App* to GitHub Pages
 
 \* created using `create-react-app`
+\* Live  https://manishsaini1.github.io/Ipod/
 
 # Introduction
 
