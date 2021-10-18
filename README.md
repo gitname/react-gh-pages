@@ -84,6 +84,13 @@ The remainder of this document contains a tutorial on creating a React app (usin
     "homepage": "http://gitname.github.io/react-gh-pages"
     ```
     
+    * If you intend to deploy the app at your GitHub user page, you should set `"homepage"` to the root URL without the `{repo-name}`, like that:
+    
+    ```
+    //...
+    "homepage": "http://gitname.github.io"
+    ```
+    
     * In the existing `scripts` property, add a `predeploy` property and a `deploy` property, each having the values shown below:
 
     ```js
@@ -92,6 +99,11 @@ The remainder of this document contains a tutorial on creating a React app (usin
       "predeploy": "npm run build",
       "deploy": "gh-pages -d build"
     }
+    ```
+    
+    * And if you are deploying this app at the user page, it is necessary to make some tweaks at the `"deploy"` string, in order to deploy it at the `main` branch, set the string to:
+    ```
+    "deploy": "gh-pages -b main -d build"
     ```
     
     * **Shortcut:** Instead of adding those properties using a text editor; if I have `sed` installed on my system, I can add the properties by issuing the following shell commands:
