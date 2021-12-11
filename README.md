@@ -32,7 +32,7 @@ The remainder of this document contains a tutorial on creating a React app (usin
 3. An adequate version of [`create-react-app`](https://github.com/facebookincubator/create-react-app) is installed. Here's the adequate version I use:
 
     ```sh
-    $ create-react-app --version
+    $ npx create-react-app --version
     1.3.1
     ```
 
