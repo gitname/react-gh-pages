@@ -4,147 +4,187 @@
 
 # Introduction
 
-In this tutorial, I'll show you how I deployed a React app—which I created using `create-react-app`—to GitHub Pages.
+In this tutorial, I'll show you how I created a React app, then deployed that React app to GitHub Pages.
 
-You can visit the deployed app, at [https://gitname.github.io/react-gh-pages/](https://gitname.github.io/react-gh-pages/).
+To create the React app, I used the [`create-react-app`](https://create-react-app.dev/) npm package. To deploy the React app to [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages), I used the [`gh-pages`](https://github.com/tschaub/gh-pages) npm package.
 
-This repository contains the files related to the app. The `master` branch contains the app's source code (the code the app's developers edit), and the `gh-pages` branch contains a *built* version of the app (i.e. the code that GitHub Pages serves to the app's visitors).
+You can visit the deployed React app, here: [https://gitname.github.io/react-gh-pages](https://gitname.github.io/react-gh-pages)
 
-The remainder of this document contains a tutorial on creating a React app (using `create-react-app`) and deploying that app to GitHub Pages.
+## This repository
+
+This repository consists of two branches: 
+
+- The `master` branch contains the app's **source code**. This is the code the app's developers edit.
+- The `gh-pages` branch contains the **app** _built from_ that source code. This is the web page the app's visitors see.
 
 # Tutorial
 
 ## Prerequisites
 
-1. An adequate version of [`Node.js`](https://nodejs.org/) is installed. Here's the adequate version I use:
+1. [`Node.js` and `npm`](https://nodejs.org/en/download/) are installed. Here are the versions I used while writing this tutorial:
 
-    ```sh
+    ```shell
     $ node --version
-    v6.10.1
-    ```
+    v16.13.2
 
-2. An adequate version of  [`npm`](https://nodejs.org/) is installed. Here's the adequate version I use:
-
-    ```sh
     $ npm --version
-    3.10.10
+    8.1.2
     ```
-3. An adequate version of [`create-react-app`](https://github.com/facebookincubator/create-react-app) is installed. Here's the adequate version I use:
+    > Note: During the `Node.js` installation process, I opted to install `npm` automatically. Installing `npm` adds both the `npm` and `npx` commands to my system.
 
-    ```sh
-    $ create-react-app --version
-    1.3.1
+1. [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) is installed. Here's the version I used while writing this tutorial:
+
+    ```shell
+    $ git --version
+    git version 2.29.1.windows.1
     ```
+    > Note: I will be using the _command-line_ Git client in this tutorial.
 
-    In the case of `create-react-app`, you can either install it globally (i.e. `$ npm install -g create-react-app`) or install it locally (i.e. `$ npm install create-react-app`). If you choose the latter, you will have to specify its path whenever you invoke it (e.g. `path/to/node_modules/.bin/create-react-app`).
-
-4. (**Optional**) An adequate version of [`sed`](http://www.gnu.org/software/sed/) is installed. Here's the adequate version I use:
-
-   ```sh
-   $ sed --version
-   sed (GNU sed) 4.4
-   ```
-
-5. A [GitHub](https://www.github.com) account. :octocat:
-
-6. A command-line Git client [setup according to GitHub](https://help.github.com/articles/set-up-git/).
+1. You have a [GitHub](https://github.com/signup) account. :octocat:
 
 ## Procedure
 
-1. **Create an *empty* repository on GitHub.** (2 minutes)
+### 1. Create an **empty** repository on GitHub
 
-    * For this tutorial, I'll create a repository named `react-gh-pages`.
-    * By *empty*, I mean *without* a `README.md` file, a `.gitignore` file, a `LICENSE` file, or any other files.
+- In this step, I'll use a form on GitHub to create an empty repository in my GitHub account.
 
-2. **Create a new React app on your computer.** (5 minutes)
+    > By "empty," I mean one that contains no files.
 
-    ```sh
-    $ create-react-app react-gh-pages
+    To do that, I'll sign into my GitHub account, then fill out the following form: 
+
+    - :writing_hand: [**Create a new repository**](https://github.com/new)
+
+    When filling out the form, I'll enter the name I want the repository to have.
+
+    > In this tutorial, I'll use a repository named `react-gh-pages`. In case you're using a repository that has a different name, you can replace all occurrences of `react-gh-pages` in these instructions with the name of the repository you're using.
+
+    In the "Initialize this repository with" section of the form, I'll leave all the checkboxes empty so GitHub does **not** initialize the repository with any files (i.e. `README.md`, `.gitignore`, or `LICENSE`).
+
+    At this point, my GitHub account will contain an empty repository named `react-gh-pages`.
+
+### 2. Create a React app
+
+- In this step, I'll use `create-react-app` to create a React app named `my-app`.
+
+    ```shell
+    $ npx create-react-app my-app
     ```
-    
-    * This is the app you will deploy to GitHub Pages in step 7.
-    * I opted to give the app the same name as my GitHub repository (i.e. `react-gh-pages`). However, you can name them differently from one another (e.g. you can name your app `app-123` and your GitHub Repository `repo-456`).
-    * This will create a new folder named `react-gh-pages` (or whatever you named your app) on your computer.
 
-3. **Install the `gh-pages` package as a "dev-dependency" of the app.** (1 minute)
+    > That command will create a React app written in **JavaScript**. To create one written in [**TypeScript**](https://create-react-app.dev/docs/adding-typescript/#installation), you can issue _this_ command instead:
+    > ```shell
+    > $ npx create-react-app my-app --template typescript
+    > ```
 
+    > Either command will create a new folder named `my-app`, which will contain the newly-created React app.
+
+    I'll enter the new folder.
+
+    ```shell
+    $ cd my-app
     ```
-    $ cd react-gh-pages
+    All of the remaining commands shown in this tutorial can be run from this new folder.
+
+    > Foreshadowing: In addition to containing the files that make up the React app, that new folder is also a Git repository. I will utilize that characteristic in step 6.
+
+### 3. Install the `gh-pages` package as a development dependency
+
+- In this step, I'll install the `gh-pages` package in a way that also designates it as a [development dependency](https://nodejs.dev/learn/npm-dependencies-and-devdependencies) of the React app.
+
+    ```shell
     $ npm install gh-pages --save-dev
     ```
-    
-    * The commands shown in the following steps can all be issued from within the app's folder.
 
-4. **Add some properties to the app's `package.json` file.** (3 minutes)
+### 4. Add the deployment destination to the `package.json` file
 
-    * At the top level, add a `homepage` property. Define its value to be the string `http://{username}.github.io/{repo-name}`, where `{username}` is your GitHub username, and `{repo-name}` is the name of the GitHub repository you created in step 1. Since my GitHub username is `gitname` and the name of my GitHub repository is `react-gh-pages`, I added the following property:
-    
-    ```js
-    //...
-    "homepage": "http://gitname.github.io/react-gh-pages"
+- In this step, I'll add the deployment destination to the `package.json` file. 
+
+    To edit the file, I'll use a code editor such as [vi](https://www.vim.org/) or [Visual Studio Code](https://code.visualstudio.com/).
+
+    ```shell
+    $ vi package.json
     ```
-    
-    * In the existing `scripts` property, add a `predeploy` property and a `deploy` property, each having the values shown below:
 
-    ```js
+    The deployment destination is the URL of the repository I created in step 1.
+
+    I'll add a property named `homepage` that has that URL as its value, like this:
+
+    ```diff
+    {
+      "name": "my-app",
+      "version": "0.1.0",
+    + "homepage": "https://gitname.github.io/react-gh-pages",
+      "private": true,
+    ```
+
+    > That URL format will allow me to deploy the React app as a GitHub [**_project_ page**](https://pages.github.com/#project-site). If, instead, I wanted to deploy the React app as a GitHub [**_user_ page**](https://pages.github.com/#user-site) and/or I wanted it to have a [custom domain name](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site), I could do so by using one of the URL formats shown in the [official `create-react-app` GitHub Pages deployment guide](https://create-react-app.dev/docs/deployment/#github-pages).
+
+### 5. Add deployment scripts to the `package.json` file
+
+- In this step, I'll add some deployment scripts to the `package.json` file. 
+
+    I'll add these two scripts to the `scripts` object:
+    ```diff
     "scripts": {
-      //...
-      "predeploy": "npm run build",
-      "deploy": "gh-pages -d build"
-    }
-    ```
-    
-    * **Shortcut:** Instead of adding those properties using a text editor; if I have `sed` installed on my system, I can add the properties by issuing the following shell commands:
-    
-    ```sh
-    $ sed -i '5i\  "homepage": "http://gitname.github.io/react-gh-pages",' ./package.json
-    $ sed -i '15i\    "predeploy": "npm run build",' ./package.json
-    $ sed -i '16i\    "deploy": "gh-pages -d build",' ./package.json
-    ```
-    
-5. **Create a git repository in the app's folder.** (1 minute)
-
-    ```
-    $ git init
-    Initialized empty Git repository in C:/path/to/react-gh-pages/.git/
+    +   "predeploy": "npm run build",
+    +   "deploy": "gh-pages -d build",
+        "start": "react-scripts start",
+        "build": "react-scripts build",
     ```
 
-6. **Add the GitHub repository as a "remote" in your local git repository.** (1 minute)
+    > That `deploy` script will allow me to deploy the React app as a GitHub [**_project_ page**](https://pages.github.com/#project-site). If, instead, I wanted to deploy the React app as a GitHub [**_user_ page**](https://pages.github.com/#user-site) (regardless of domain name), I could do so by using the `deploy` script shown in the [official `create-react-app` GitHub Pages deployment guide](https://create-react-app.dev/docs/deployment/#github-pages).
 
-    ```
+### 6. Add the GitHub repository as a **remote**
+
+- In this step, I'll add a [remote](https://git-scm.com/docs/git-remote) to the local repository, designate the repository I created in step 1, as a  named `origin` in the local Git repository.
+
+    ```shell
     $ git remote add origin https://github.com/gitname/react-gh-pages.git
     ```
-    
-    * This will make it so the `gh-pages` package knows where you want it to deploy your app in step 7.
-    * It will also make it so git knows where you want it to push your source code (i.e. the commits on your `master` branch) in step 8.
 
-7. **Generate a *production build* of your app, and deploy it to GitHub Pages.** (2 minutes)
+    > That will make it so that, when I (or the `gh-pages` npm package acting on my behalf) perform a `git push`, the payload is pushed to _that_ repository.
 
-    ```
+### 7. Deploy the React app to GitHub
+
+- In this step, I will do two things:
+
+    1. Build a distributable version of the React app
+    2. Deploy that version to GitHub
+
+    To do both of those things, I'll issue this single command:
+
+    ```shell
     $ npm run deploy
     ```
-    
-    * That's it! Your app is now accessible at the URL you specified in step 4.
-    * In my case, my app is now accessible at: https://gitname.github.io/react-gh-pages/
-    * I recommend exploring the GitHub repository at this point. When I explored it, I noticed that, although a `master` branch did not exist, a `gh-pages` branch did exist. I noticed the latter contained the *built* app code, as opposed to the app's source code.
 
-8. **Optionally, commit your source code to the "master" branch and push your commit to GitHub.** (1 minute)
+    > That will cause the `predeploy` and `deploy` scripts defined in `package.json` to run.
+    >
+    > Under the hood, the `predeploy` script will build a distributable version of the React app and store it in a folder named `dist`. Then, the `deploy` script will push the contents of that folder to the `gh-pages` branch of the GitHub repository.
 
-    ```
+    GitHub Pages will automatically detect that files have been pushed to the `gh-pages` branch of the GitHub repository. Once it detects that, it will begin serving those files — in this case, the distributable version of the React app — to anyone that visits the URL I specified in step 4.
+
+    **That's it!** The React app is now accessible at the URL I specified in step 4: https://gitname.github.io/react-gh-pages :rocket:
+
+### 8. (Optional) Commit the React app's **source code** to the `master` branch
+
+- In the previous step, the `gh-pages` npm package pushed the distributable version of the React app to a branch named `gh-pages` in the GitHub repository.
+
+    In this step, I will push the **source code** of the React app to a branch named `master` in the GitHub repository.
+
+    To do that, I'll issue the following commands:
+
+    ```shell
     $ git add .
-    $ git commit -m "Create a React app and publish it to GitHub Pages"
+    $ git commit -m "Create a React app and deploy it to GitHub Pages"
     $ git push origin master
     ```
 
-    * I recommend exploring the GitHub repository once again at this point. When I did that, I noticed that a `master` branch now existed, and it contained the app's source code.
-    * So, the `master` branch held the source code, and the `gh-pages` branch held the *built* app code.
+    > I recommend exploring the GitHub repository at this point. It will have two branches: `master` and `gh-pages`. The `master` branch will contain the React app's source code, while the `gh-pages` branch will contain the distributable version of the React app.
 
 # References
 
-1. [Facebook's tutorial on deploying a React app to GitHub Pages](https://facebook.github.io/create-react-app/docs/deployment#github-pages-https-pagesgithubcom)
+1. [The official `create-react-app` deployment guide](https://create-react-app.dev/docs/deployment/#github-pages)
 
 # Notes
 
-* I created this React app using [`create-react-app`](https://github.com/facebookincubator/create-react-app). By default, apps created using `create-react-app` have a README.md file that looks like [this](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md). Indeed, the README.md file you're now reading originally looked like that. I have since changed it to look the way it looks today.
-* Special thanks to GitHub, Inc., for providing us with the GitHub Pages hosting functionality at no extra charge.
-* And now, time to turn the default `create-react-app` app into something unique!
+* Special thanks to GitHub (the company) for providing us with the GitHub Pages hosting service for free.
+* And now, time to turn the default React app generated by `create-react-app` into something unique!
