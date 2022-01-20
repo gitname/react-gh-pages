@@ -38,21 +38,28 @@ If you follow along with this tutorial, you'll end up with a new React app—hos
 
 ### 1. Create an **empty** repository on GitHub
 
-- In this step, I'll use a form on GitHub to create an empty repository named `react-gh-pages` in my GitHub account.
+- To create an empty repository on GitHub:
+  - Sign into your GitHub account.
+  - Visit the [Create a new repository](https://github.com/new) form.
+  - Fill in the form as follows:
+    - **Repository name:** You can enter any name you want.
 
-    > By "empty," I mean one that contains no files.
+      > The name you enter will show up in a few places: (a) in the heading at the top of the repository's pages on GitHub, (b) in the URL of the repository, and (c) in the URL of the deployed React app.
+      
+      For this tutorial, I'll enter: `react-gh-pages`.
 
-    To do that, I'll sign into my GitHub account, then fill out the following form: 
+    - **Repository privacy:** Select _Public_ (or _Private_\*).
 
-    - :writing_hand: [**Create a new repository**](https://github.com/new)
+      > \* For [GitHub Free](https://docs.github.com/en/get-started/learning-about-github/githubs-products#github-free-for-user-accounts) users, the only type of repository that can be used with GitHub Pages is _Public_. For [GitHub Pro](https://docs.github.com/en/get-started/learning-about-github/githubs-products#github-pro) users (and other paying users), both _Public_ and _Private_ repositories can be used with GitHub Pages.
 
-    When filling out the form, I'll enter the name I want the repository to have, which is `react-gh-pages`.
+      For this tutorial, I'll choose: _Public_.
 
-    > In this tutorial, I'll be using a repository named `react-gh-pages`. In case you're using a repository that has a different name, you can replace all occurrences of `react-gh-pages` in these instructions with the name of the repository you're using.
+    - **Initialize repository:** Leave all checkboxes empty.
 
-    I want the repository to be empty. So, in the "Initialize this repository with" section of the form, I'll leave all the checkboxes empty so GitHub **doesn't** initialize the repository with any files (i.e. `README.md`, `.gitignore`, or `LICENSE`).
+      > That will make it so GitHub creates an empty repository, instead of pre-populating the repository with a `README.md`, `.gitignore`, and/or `LICENSE` file. 
+  - Submit the form.
 
-    At this point, my GitHub account contains an empty repository named `react-gh-pages`.
+At this point, your GitHub account will contain an empty repository, having the name and privacy type that you specified.
 
 ### 2. Create a React app
 
