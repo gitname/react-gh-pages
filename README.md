@@ -59,7 +59,7 @@ If you follow along with this tutorial, you'll end up with a new React app—hos
       > That will make it so GitHub creates an empty repository, instead of pre-populating the repository with a `README.md`, `.gitignore`, and/or `LICENSE` file. 
   - Submit the form.
 
-At this point, your GitHub account will contain an empty repository, having the name and privacy type that you specified.
+At this point, your GitHub account contains an empty repository, having the name and privacy type that you specified.
 
 ### 2. Create a React app
 
@@ -86,7 +86,7 @@ At this point, your GitHub account will contain an empty repository, having the 
     $ cd my-app
     ```
 
-    All of the remaining commands shown in this tutorial can be run from that folder.
+At this point, there is a React app on your computer and you are in the folder that contains its source code. All of the remaining commands shown in this tutorial can be run from that folder.
 
 ### 3. Install the `gh-pages` package as a development dependency
 
