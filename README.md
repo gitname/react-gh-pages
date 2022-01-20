@@ -63,27 +63,30 @@ At this point, your GitHub account will contain an empty repository, having the 
 
 ### 2. Create a React app
 
-- In this step, I'll use `create-react-app` to create a React app named `my-app`.
+- Create a React app named `my-app`:
 
+    > In case you want to use a different name from `my-app` (e.g. `web-ui`), you can accomplish that by replacing all occurrences of `my-app` in this tutorial, with that other name (i.e. `my-app` --> `web-ui`).
+  
     ```shell
     $ npx create-react-app my-app
     ```
 
-    > That command will create a React app written in **JavaScript**. To create one written in [**TypeScript**](https://create-react-app.dev/docs/adding-typescript/#installation), you can issue _this_ command instead:
+    > That command will create a React app written in JavaScript. To create one written in [TypeScript](https://create-react-app.dev/docs/adding-typescript/#installation), you can issue this command instead:
     > ```shell
     > $ npx create-react-app my-app --template typescript
     > ```
 
-    > Either command will create a new folder named `my-app`, which will contain the newly-created React app.
+    That command will create a new folder named `my-app`, which will contain the source code of a React app.
 
-    I'll enter the new folder.
+    > In addition to containing the source code of the React app, that folder is also a Git repository. That characteristic of the folder will come into play in Step 6.    
 
+- Enter the newly-created folder:
+  
     ```shell
     $ cd my-app
     ```
-    All of the remaining commands shown in this tutorial can be run from that new folder.
 
-    > Foreshadowing: In addition to containing the files that make up the React app, that new folder is also a Git repository. I will utilize that characteristic in step 6.
+    All of the remaining commands shown in this tutorial can be run from that folder.
 
 ### 3. Install the `gh-pages` package as a development dependency
 
@@ -140,7 +143,7 @@ At this point, your GitHub account will contain an empty repository, having the 
 
 - In this step, I'll add a [remote](https://git-scm.com/docs/git-remote) to the local repository. 
 
-    That remote will be named `origin` and will point to the repository I created in step 1. The URL format is: `https://github.com/{username}/{repo-name}.git`
+    That remote will be named `origin` and will point to the repository I created in Step 1. The URL format is: `https://github.com/{username}/{repo-name}.git`
 
     ```shell
     $ git remote add origin https://github.com/gitname/react-gh-pages.git
@@ -165,7 +168,7 @@ At this point, your GitHub account will contain an empty repository, having the 
     >
     > Under the hood, the `predeploy` script will build a distributable version of the React app and store it in a folder named `build`. Then, the `deploy` script will push the contents of that folder to the `gh-pages` branch of the GitHub repository.
 
-    GitHub Pages will automatically detect that files have been pushed to the `gh-pages` branch of the GitHub repository. Once it detects that, it will begin serving those files — in this case, the distributable version of the React app — to anyone that visits the URL I specified in step 4; i.e. the app's base URL.
+    GitHub Pages will automatically detect that files have been pushed to the `gh-pages` branch of the GitHub repository. Once it detects that, it will begin serving those files — in this case, the distributable version of the React app — to anyone that visits the URL I specified in Step 4; i.e. the app's base URL.
 
     **That's it!** The React app is now accessible at its base URL: https://gitname.github.io/react-gh-pages :rocket:
 
