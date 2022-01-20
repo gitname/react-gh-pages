@@ -38,32 +38,31 @@ If you follow along with this tutorial, you'll end up with a new React app—hos
 
 ### 1. Create an **empty** repository on GitHub
 
-- To create an empty repository on GitHub:
-  - Sign into your GitHub account.
-  - Visit the [Create a new repository](https://github.com/new) form.
-  - Fill in the form as follows:
-    - **Repository name:** You can enter any name you want.
+1. Sign into your GitHub account.
+2. Visit the [Create a new repository](https://github.com/new) form.
+3. Fill in the form as follows:
+   - **Repository name:** You can enter any name you want.
 
-      > The name you enter will show up in a few places: (a) in references to the repository throughout GitHub, (b) in the URL of the repository, and (c) in the URL of the deployed React app.
-      
-      For this tutorial, I'll enter: `react-gh-pages`.
+        > The name you enter will show up in a few places: (a) in references to the repository throughout GitHub, (b) in the URL of the repository, and (c) in the URL of the deployed React app.
 
-    - **Repository privacy:** Select _Public_ (or _Private_\*).
+        For this tutorial, I'll enter: `react-gh-pages`.
+        
+   - **Repository privacy:** Select _Public_ (or _Private_\*).
 
-      > \* For [GitHub Free](https://docs.github.com/en/get-started/learning-about-github/githubs-products#github-free-for-user-accounts) users, the only type of repository that can be used with GitHub Pages is _Public_. For [GitHub Pro](https://docs.github.com/en/get-started/learning-about-github/githubs-products#github-pro) users (and other paying users), both _Public_ and _Private_ repositories can be used with GitHub Pages.
+        > \* For [GitHub Free](https://docs.github.com/en/get-started/learning-about-github/githubs-products#github-free-for-user-accounts) users, the only type of repository that can be used with GitHub Pages is _Public_. For [GitHub Pro](https://docs.github.com/en/get-started/learning-about-github/githubs-products#github-pro) users (and other paying users), both _Public_ and _Private_ repositories can be used with GitHub Pages.
 
-      For this tutorial, I'll choose: _Public_.
+        For this tutorial, I'll choose: _Public_.
 
-    - **Initialize repository:** Leave all checkboxes empty.
+   - **Initialize repository:** Leave all checkboxes empty.
 
-      > That will make it so GitHub creates an empty repository, instead of pre-populating the repository with a `README.md`, `.gitignore`, and/or `LICENSE` file. 
-  - Submit the form.
+        > That will make it so GitHub creates an empty repository, instead of pre-populating the repository with a `README.md`, `.gitignore`, and/or `LICENSE` file.
+4. Submit the form.
 
 At this point, your GitHub account contains an empty repository, having the name and privacy type that you specified.
 
 ### 2. Create a React app
 
-- Create a React app named `my-app`:
+1. Create a React app named `my-app`:
 
     > In case you want to use a different name from `my-app` (e.g. `web-ui`), you can accomplish that by replacing all occurrences of `my-app` in this tutorial, with that other name (i.e. `my-app` --> `web-ui`).
   
@@ -80,7 +79,7 @@ At this point, your GitHub account contains an empty repository, having the name
 
     > In addition to containing the source code of the React app, that folder is also a Git repository. That characteristic of the folder will come into play in Step 6.    
 
-- Enter the newly-created folder:
+2. Enter the newly-created folder:
   
     ```shell
     $ cd my-app
