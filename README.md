@@ -44,7 +44,7 @@ If you follow along with this tutorial, you'll end up with a new React app—hos
   - Fill in the form as follows:
     - **Repository name:** You can enter any name you want.
 
-      > The name you enter will show up in a few places: (a) in the heading at the top of the repository's pages on GitHub, (b) in the URL of the repository, and (c) in the URL of the deployed React app.
+      > The name you enter will show up in a few places: (a) in references to the repository throughout GitHub, (b) in the URL of the repository, and (c) in the URL of the deployed React app.
       
       For this tutorial, I'll enter: `react-gh-pages`.
 
