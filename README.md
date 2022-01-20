@@ -54,7 +54,7 @@ This repository consists of two branches:
 
     - :writing_hand: [**Create a new repository**](https://github.com/new)
 
-    When filling out the form, I'll enter the name I want the repository to have, which is `reach-gh-pages`.
+    When filling out the form, I'll enter the name I want the repository to have, which is `react-gh-pages`.
 
     > In this tutorial, I'll be using a repository named `react-gh-pages`. In case you're using a repository that has a different name, you can replace all occurrences of `react-gh-pages` in these instructions with the name of the repository you're using.
 
