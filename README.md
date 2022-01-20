@@ -14,7 +14,7 @@ If you follow along with this tutorial, you'll end up with a new React app—hos
 
 ## Prerequisites
 
-1. [`Node.js` and `npm`](https://nodejs.org/en/download/) are installed. Here are the versions I used while writing this tutorial:
+1. [Node and npm](https://nodejs.org/en/download/) are installed. Here are the versions I'll be using while making this tutorial:
 
     ```shell
     $ node --version
@@ -23,15 +23,14 @@ If you follow along with this tutorial, you'll end up with a new React app—hos
     $ npm --version
     8.1.2
     ```
-    > Note: During the `Node.js` installation process, I opted to install `npm` automatically. Installing `npm` adds both the `npm` and `npx` commands to my system.
+    > Installing npm adds two commands to the system—`npm` and `npx`—both of which I'll be using while making this tutorial.
 
-2. [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) is installed. Here's the version I used while writing this tutorial:
+2. [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) is installed. Here's the version I'll be using while making this tutorial:
 
     ```shell
     $ git --version
     git version 2.29.1.windows.1
     ```
-    > Note: I will be using the _command-line_ Git client in this tutorial.
 
 3. A [GitHub](https://github.com/signup) account. :octocat:
 
