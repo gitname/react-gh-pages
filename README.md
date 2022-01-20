@@ -114,8 +114,6 @@ At this point, the `gh-pages` npm package is installed on your computer and the 
 2. Add a `homepage` property in this format\*: `https://{username}.github.io/{repo-name}`
 
     > \* For a [project site](https://pages.github.com/#project-site), that's the format. For a [user site](https://pages.github.com/#user-site), the format is: `https://{username}.github.io`. You can read more about the `homepage` property in the ["GitHub Pages" section](https://create-react-app.dev/docs/deployment/#github-pages) of the `create-react-app` documentation.
-   
-    > In this tutorial, I'll be deploying the React app as a project site.
 
     ```diff
     {
