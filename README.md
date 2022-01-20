@@ -87,15 +87,15 @@ At this point, your GitHub account contains an empty repository, having the name
 
 At this point, there is a React app on your computer and you are in the folder that contains its source code. All of the remaining commands shown in this tutorial can be run from that folder.
 
-### 3. Install the `gh-pages` package as a development dependency
+### 3. Install the `gh-pages` npm package
 
-- In this step, I'll install the `gh-pages` package in a way that also designates it as a [development dependency](https://nodejs.dev/learn/npm-dependencies-and-devdependencies) of the React app.
-
+1. Install the [`gh-pages`](https://github.com/tschaub/gh-pages) npm package and designate it as a [development dependency](https://nodejs.dev/learn/npm-dependencies-and-devdependencies):
+ 
     ```shell
     $ npm install gh-pages --save-dev
     ```
-    
-    > That command both (a) installs the `gh-pages` package and (b) adds its name and version number to the `devDependencies` section of the `package.json` file. 
+
+At this point, the `gh-pages` npm package is installed on your computer and the React app's dependence upon it is documented in the React app's `package.json` file.
 
 ### 4. Add the app's base URL to the `package.json` file
 
