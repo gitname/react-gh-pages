@@ -158,7 +158,7 @@ This repository consists of two branches:
 
     > That will cause the `predeploy` and `deploy` scripts defined in `package.json` to run.
     >
-    > Under the hood, the `predeploy` script will build a distributable version of the React app and store it in a folder named `dist`. Then, the `deploy` script will push the contents of that folder to the `gh-pages` branch of the GitHub repository.
+    > Under the hood, the `predeploy` script will build a distributable version of the React app and store it in a folder named `build`. Then, the `deploy` script will push the contents of that folder to the `gh-pages` branch of the GitHub repository.
 
     GitHub Pages will automatically detect that files have been pushed to the `gh-pages` branch of the GitHub repository. Once it detects that, it will begin serving those files — in this case, the distributable version of the React app — to anyone that visits the URL I specified in step 4.
 
