@@ -214,3 +214,12 @@ In this step, I'll show you how you can store the source code of the React app o
     - `master` - the _source code_ of the React app
     - `gh-pages` - the React app _built from_ that source code
 
+ # Contributors
+
+Thanks to these people for contributing to the maintenance of this tutorial:
+
+[![gitname](https://github.com/gitname.png?size=40)](https://github.com/gitname)
+[![adnjoo](https://github.com/adnjoo.png?size=40)](https://github.com/adnjoo)
+[![thebeatlesphan](https://github.com/thebeatlesphan.png?size=40)](https://github.com/thebeatlesphan)
+
+This list is maintained manually (for now) and only includes people who have consented to me including them here. Their contributions range from providing contructive feedback to submitting pull requests.
