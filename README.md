@@ -168,14 +168,9 @@ At this point, the  React app's `package.json` file includes deployment scripts.
 
 At this point, the local repository has a "remote" whose URL points to the GitHub repository you created in Step 1.
 
-### 7. Deploy the React app to GitHub
+### 7. Deploy the React app to GitHub Pages
 
-- In this step, I will do two things:
-
-    1. Build a distributable instance of the React app
-    2. Deploy that distributable instance of the React app to GitHub
-
-    To do both of those things, I'll issue this one command:
+1. Deploy the React app to GitHub Pages
 
     ```shell
     $ npm run deploy
@@ -185,9 +180,11 @@ At this point, the local repository has a "remote" whose URL points to the GitHu
     >
     > Under the hood, the `predeploy` script will build a distributable version of the React app and store it in a folder named `build`. Then, the `deploy` script will push the contents of that folder to the `gh-pages` branch of the GitHub repository.
 
-    GitHub Pages will automatically detect that files have been pushed to the `gh-pages` branch of the GitHub repository. Once it detects that, it will begin serving those files — in this case, the distributable version of the React app — to anyone that visits the URL I specified in Step 4; i.e. the app's base URL.
+    GitHub Pages will automatically detect that files have been pushed to the `gh-pages` branch of the GitHub repository. Once it detects that, it will begin serving those files — in this case, the distributable version of the React app — to anyone that visits the `homepage` URL you specified in Step 4.
 
-    **That's it!** The React app is now accessible at its base URL: https://gitname.github.io/react-gh-pages :rocket:
+**That's it!** The React app has been deployed to GitHub Pages! :rocket:
+    
+At this point, the React app is accessible to anyone who visits the `homepage` URL you specified in Step 4. For example, the React app I deployed is accessible at https://gitname.github.io/react-gh-pages.
 
 ### 8. (Optional) Commit the React app's **source code** to the `master` branch
 
