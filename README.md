@@ -146,17 +146,27 @@ At this point, the React app's `package.json` file includes a property named `ho
 
 At this point, the  React app's `package.json` file includes deployment scripts.
 
-### 6. Add the GitHub repository as a **remote**
+### 6. Add the GitHub repository as a "remote"
 
-- In this step, I'll add a [remote](https://git-scm.com/docs/git-remote) to the local Git repository. 
+1. Add a "[remote](https://git-scm.com/docs/git-remote)" to the local Git repository.
 
-    That remote will be named `origin` and will point to the GitHub repository I created in Step 1. The URL format is: `https://github.com/{username}/{repo-name}.git`
+    You can do that by issuing a command in this format: 
+    
+    ```shell
+    $ git remote add origin https://github.com/{username}/{repo-name}.git
+    ```
+    
+    To customize that command for your situation, replace `{username}` with your GitHub username and replace `{repo-name}` with the name of the GitHub repository you created in Step 1.
+
+    In my case, I'll run:
 
     ```shell
     $ git remote add origin https://github.com/gitname/react-gh-pages.git
     ```
 
-    > That will make it so that, when I (or the `gh-pages` npm package acting on my behalf) perform a `git push`, Git knows where it can send the files being pushed.
+    > That command tells Git where I want it to push things whenever I—or the `gh-pages` npm package acting on my behalf—issue the `$ git push` command from within this local Git repository.
+
+At this point, the local repository has a "remote" whose URL points to the GitHub repository you created in Step 1.
 
 ### 7. Deploy the React app to GitHub
 
