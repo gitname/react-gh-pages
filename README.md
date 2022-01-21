@@ -188,11 +188,11 @@ At this point, the React app is accessible to anyone who visits the `homepage` U
 
 ### 8. (Optional) Commit the React app's **source code** to the `master` branch
 
-- In the previous step, the `gh-pages` npm package pushed the distributable version of the React app to a branch named `gh-pages` in the GitHub repository.
+In the previous step, the `gh-pages` npm package pushed the distributable version of the React app to a branch named `gh-pages` in the GitHub repository. However, the _source code_ of the React app is not yet stored on GitHub.
 
-    In this step, I will push the **source code** of the React app to a branch named `master` in the GitHub repository.
+In this step, I'll show you how you can store the source code of the React app on GitHub.
 
-    To do that, I'll issue the following commands:
+1. Commit the changes you made while you were following this tutorial, to the `master` branch of the local Git repository; then, push that branch up to the `master` branch of the GitHub repository.
 
     ```shell
     $ git add .
