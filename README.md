@@ -216,10 +216,12 @@ In this step, I'll show you how you can store the source code of the React app o
 
  # Contributors
 
-Thanks to these people for contributing to the maintenance of this tutorial:
+Thanks to these people for contributing to the maintenance of this tutorial.
 
 [![gitname](https://github.com/gitname.png?size=40)](https://github.com/gitname)
+[![rhulse](https://github.com/rhulse.png?size=40)](https://github.com/rhulse)
+[![AbhishekCode](https://github.com/AbhishekCode.png?size=40)](https://github.com/AbhishekCode)
 [![adnjoo](https://github.com/adnjoo.png?size=40)](https://github.com/adnjoo)
 [![thebeatlesphan](https://github.com/thebeatlesphan.png?size=40)](https://github.com/thebeatlesphan)
 
-This list is maintained manually (for now) and only includes people who have consented to me including them here. Their contributions range from providing contructive feedback to submitting pull requests.
+This list is maintained manually—for now—and includes (a) each person who submitted a pull request that was eventually merged into `master`, and (b) each person who contributed in a different way (e.g. providing constructive feedback) and who approved of me including them in this list.
