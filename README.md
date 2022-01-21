@@ -146,7 +146,7 @@ At this point, the React app's `package.json` file includes a property named `ho
 
 At this point, the  React app's `package.json` file includes deployment scripts.
 
-### 6. Add the GitHub repository as a "remote"
+### 6. Add a "remote" that points to the GitHub repository
 
 1. Add a "[remote](https://git-scm.com/docs/git-remote)" to the local Git repository.
 
@@ -186,7 +186,7 @@ At this point, the local repository has a "remote" whose URL points to the GitHu
     
 At this point, the React app is accessible to anyone who visits the `homepage` URL you specified in Step 4. For example, the React app I deployed is accessible at https://gitname.github.io/react-gh-pages.
 
-### 8. (Optional) Commit the React app's **source code** to the `master` branch
+### 8. (Optional) Store the React app's _source code_ on GitHub
 
 In the previous step, the `gh-pages` npm package pushed the distributable version of the React app to a branch named `gh-pages` in the GitHub repository. However, the _source code_ of the React app is not yet stored on GitHub.
 
