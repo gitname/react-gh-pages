@@ -186,6 +186,11 @@ At this point, the local repository has a "remote" whose URL points to the GitHu
     
 At this point, the React app is accessible to anyone who visits the `homepage` URL you specified in Step 4. For example, the React app I deployed is accessible at https://gitname.github.io/react-gh-pages.
 
+
+> Note: Do make sure that the code is being built from the `gh-pages` branch. If not, you can maunally change it by opening github pages in the project settings and selecting the mentioned source branch.
+![image](https://user-images.githubusercontent.com/90551491/151651463-a4e75efc-d3a7-4679-9853-a1de6fade5d0.png)
+
+
 ### 8. (Optional) Store the React app's _source code_ on GitHub
 
 In the previous step, the `gh-pages` npm package pushed the distributable version of the React app to a branch named `gh-pages` in the GitHub repository. However, the _source code_ of the React app is not yet stored on GitHub.
