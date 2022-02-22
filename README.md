@@ -122,7 +122,7 @@ At this point, the `gh-pages` npm package is installed on your computer and the 
     + "homepage": "https://gitname.github.io/react-gh-pages",
       "private": true,
     ```
-At this point, the React app's `package.json` file includes a property named `homepage`.
+At this point, the React app's `package.json` file includes a property named `homepage`.  Note: the "+" sign is a common syntax for showing what has been added in commit histories.  It's used in this example to show that ```"homepage": "https://gitname.github.io/react-gh-pages"``` is being added.  Do not, however, actually add the "+" into your package.json file.
 
 ### 5. Add deployment scripts to the `package.json` file
 
