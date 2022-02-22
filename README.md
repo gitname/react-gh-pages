@@ -170,7 +170,7 @@ At this point, the  React app's `package.json` file includes deployment scripts.
 
 At this point, the local repository has a "remote" whose URL points to the GitHub repository you created in Step 1.
 
-If you're having trouble finding what the repositories name is, you can click on the "Settings" tab on the upper part of the page, then click on "Pages" menu on the left-hand side and a page with the words "Your site is published at https://username.github.io/project-name with come up.  You can copy and paste that name, just be sure to remove the "/" at the end.  
+If you're having trouble finding what the repositories name is, you can click on the "Settings" tab on the upper part of the page, then click on "Pages" menu on the left-hand side and a page with the words "Your site is published at https://username.github.io/project-name with come up.  You can copy and paste that name, just be sure to remove the "/" at the end.  ![Where to Find Project Name](https://github.com/trrapp12/react-gh-pages/blob/master/screenshot-github.com-2022.02.22-06_58_50.png)
 
 ### 7. Deploy the React app to GitHub Pages
 
