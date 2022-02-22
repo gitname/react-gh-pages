@@ -178,9 +178,14 @@ At this point, the local repository has a "remote" whose URL points to the GitHu
 
     > That will cause the `predeploy` and `deploy` scripts defined in `package.json` to run.
     >
-    > Under the hood, the `predeploy` script will build a distributable version of the React app and store it in a folder named `build`. Then, the `deploy` script will push the contents of that folder to the `gh-pages` branch of the GitHub repository.
+    > Under the hood, the `predeploy` script will build a distributable version of the React app and store it in a folder named `build`. Then, the `deploy` script will push the contents of that folder to a new commit on the `gh-pages` branch of the GitHub repository, creating that branch if it doesn't already exist.
 
-    GitHub Pages will automatically detect that files have been pushed to the `gh-pages` branch of the GitHub repository. Once it detects that, it will begin serving those files — in this case, the distributable version of the React app — to anyone that visits the `homepage` URL you specified in Step 4.
+    > By default, the new commit on the `gh-pages` branch will have a commit message of "Updates". You can [specify a custom commit message](https://github.com/gitname/react-gh-pages/issues/80#issuecomment-1042449820) via the `-m` option, like this:
+    > ```shell
+    > $ npm run deploy -- -m "Deploy React app to GitHub Pages"
+    > ```
+
+    GitHub Pages will automatically detect that a new commit has been added to the `gh-pages` branch of the GitHub repository. Once it detects that, it will begin serving the files that make up that commit — in this case, the distributable version of the React app — to anyone that visits the `homepage` URL you specified in Step 4.
 
 **That's it!** The React app has been deployed to GitHub Pages! :rocket:
     
@@ -196,7 +201,7 @@ In this step, I'll show you how you can store the source code of the React app o
 
     ```shell
     $ git add .
-    $ git commit -m "Create a React app and deploy it to GitHub Pages"
+    $ git commit -m "Configure React app for deployment to GitHub Pages"
     $ git push origin master
     ```
 
