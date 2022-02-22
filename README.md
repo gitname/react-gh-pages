@@ -43,7 +43,7 @@ If you follow along with this tutorial, you'll end up with a new React app—hos
 3. Fill in the form as follows:
     - **Repository name:** You can enter any name you want\*.
 
-        > \* For a [project site](https://pages.github.com/#project-site), you can enter any name you want. For a [user site](https://pages.github.com/#user-site), GitHub [requires](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#types-of-github-pages-sites) that the repository's name have the following format: `{username}.github.io` (e.g. `gitname.github.io`)
+        > \* For a [project site](https://pages.github.com/#project-site), you can enter any name you want. For a [user site](https://pages.github.com/#user-site), GitHub [requires](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#types-of-github-pages-sites) that the repository's name have the following format: `{username}.github.io` (e.g. `gitname.github.io`). For an explanation of the difference between a project site and a user site, please see [Types of Github Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#types-of-github-pages-sites).
         
         > The name you enter will show up in a few places: (a) in references to the repository throughout GitHub, (b) in the URL of the repository, and (c) in the URL of the deployed React app.
 
@@ -122,7 +122,7 @@ At this point, the `gh-pages` npm package is installed on your computer and the 
     + "homepage": "https://gitname.github.io/react-gh-pages",
       "private": true,
     ```
-At this point, the React app's `package.json` file includes a property named `homepage`.
+At this point, the React app's `package.json` file includes a property named `homepage`.  Note: the "+" sign is a common syntax for showing what has been added in commit histories.  It's used in this example to show that ```"homepage": "https://gitname.github.io/react-gh-pages"``` is being added.  Do not, however, actually add the "+" into your package.json file.
 
 ### 5. Add deployment scripts to the `package.json` file
 
@@ -142,7 +142,9 @@ At this point, the React app's `package.json` file includes a property named `ho
         "build": "react-scripts build",
     ```
 
-    > \* For a [project site](https://pages.github.com/#project-site), that's the `deploy` script. For a [user site](https://pages.github.com/#user-site), the `deploy` script is: `gh-pages -b master -d build`. You can read more about the `deploy` script in the ["GitHub Pages" section](https://create-react-app.dev/docs/deployment/#github-pages) of the `create-react-app` documentation.
+    > \* For a [project site](https://pages.github.com/#project-site), that's the `deploy` script. 
+    > 
+    > For a [user site](https://pages.github.com/#user-site), the `deploy` script is: `gh-pages -b master -d build`. You can read more about the `deploy` script in the ["GitHub Pages" section](https://create-react-app.dev/docs/deployment/#github-pages) of the `create-react-app` documentation.
 
 At this point, the  React app's `package.json` file includes deployment scripts.
 
@@ -167,6 +169,8 @@ At this point, the  React app's `package.json` file includes deployment scripts.
     > That command tells Git where I want it to push things whenever I—or the `gh-pages` npm package acting on my behalf—issue the `$ git push` command from within this local Git repository.
 
 At this point, the local repository has a "remote" whose URL points to the GitHub repository you created in Step 1.
+
+If you're having trouble finding what the repositories name is, you can click on the "Settings" tab on the upper part of the page, then click on "Pages" menu on the left-hand side and a page with the words "Your site is published at ```https://username.github.io/project-name/``` " will be displayed.  You can copy and paste that name, just be sure to remove the "/" at the end.  ![Where to Find Project Name](https://github.com/trrapp12/react-gh-pages/blob/master/screenshot-github.com-2022.02.22-06_58_50.png).
 
 ### 7. Deploy the React app to GitHub Pages
 
