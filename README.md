@@ -132,7 +132,7 @@ At this point, the React app's `package.json` file includes a property named `ho
     $ vi package.json
     ```
 
-2. Add a `predeploy` property and a `deploy` property\* to the `scripts` object:
+2. Add a `predeploy` property and a `deploy` property to the `scripts` object:
 
     ```diff
     "scripts": {
@@ -141,8 +141,6 @@ At this point, the React app's `package.json` file includes a property named `ho
         "start": "react-scripts start",
         "build": "react-scripts build",
     ```
-
-    > \* For a [project site](https://pages.github.com/#project-site), that's the `deploy` script. For a [user site](https://pages.github.com/#user-site), the `deploy` script is: `gh-pages -b master -d build`. You can read more about the `deploy` script in the ["GitHub Pages" section](https://create-react-app.dev/docs/deployment/#github-pages) of the `create-react-app` documentation.
 
 At this point, the  React app's `package.json` file includes deployment scripts.
 
@@ -210,6 +208,7 @@ In this step, I'll show you how you can store the source code of the React app o
 # References
 
 1. [The official `create-react-app` deployment guide](https://create-react-app.dev/docs/deployment/#github-pages)
+2. [GitHub blog: Build and deploy GitHub Pages from any branch](https://github.blog/changelog/2020-09-03-build-and-deploy-github-pages-from-any-branch/)
 
 # Notes
 
