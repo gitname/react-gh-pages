@@ -222,10 +222,47 @@ In this step, I'll show you how you can store the source code of the React app o
 
 Thanks to these people for contributing to the maintenance of this tutorial.
 
-[![gitname](https://github.com/gitname.png?size=40)](https://github.com/gitname)
-[![rhulse](https://github.com/rhulse.png?size=40)](https://github.com/rhulse)
-[![AbhishekCode](https://github.com/AbhishekCode.png?size=40)](https://github.com/AbhishekCode)
-[![adnjoo](https://github.com/adnjoo.png?size=40)](https://github.com/adnjoo)
-[![thebeatlesphan](https://github.com/thebeatlesphan.png?size=40)](https://github.com/thebeatlesphan)
+<!--
+
+Template:
+---------
+
+<a href="https://github.com/____" target="_blank" title="____">
+  <img src="https://github.com/____.png?size=40" height="40" width="40" alt="____" />
+</a>
+
+Instructions:
+-------------
+
+1. Copy the template and paste it below.
+2. Replace the four "____" strings with the contributor's GitHub username.
+
+Note: I specified the avatars using HTML because, when I did so using Markdown,
+      only the _custom_ avatars appeared at the size I specified via the URL
+      (e.g. 40px squared, for `https://github.com/gitname.png?size=40`);
+      the GitHub-generated avatars seemed to ignore the size parameter and,
+      instead, appear at their full size (approximately 420px squared).
+      By using HTML, I can force _both_ types to appear at 40px squared.
+
+-->
+
+<a href="https://github.com/gitname" target="_blank" title="gitname">
+  <img src="https://github.com/gitname.png?size=40" height="40" width="40" alt="gitname" />
+</a>
+<a href="https://github.com/rhulse" target="_blank" title="rhulse">
+  <img src="https://github.com/rhulse.png?size=40" height="40" width="40" alt="rhulse" />
+</a>
+<a href="https://github.com/AbhishekCode" target="_blank" title="AbhishekCode">
+  <img src="https://github.com/AbhishekCode.png?size=40" height="40" width="40" alt="AbhishekCode" />
+</a>
+<a href="https://github.com/adnjoo" target="_blank" title="adnjoo">
+  <img src="https://github.com/adnjoo.png?size=40" height="40" width="40" alt="adnjoo" />
+</a>
+<a href="https://github.com/thebeatlesphan" target="_blank" title="thebeatlesphan">
+  <img src="https://github.com/thebeatlesphan.png?size=40" height="40" width="40" alt="thebeatlesphan" />
+</a>
+<a href="https://github.com/valerio-pescatori" target="_blank" title="valerio-pescatori">
+  <img src="https://github.com/valerio-pescatori.png?size=40" height="40" width="40" alt="valerio-pescatori" />
+</a>
 
 This list is maintained manually—for now—and includes (a) each person who submitted a pull request that was eventually merged into `master`, and (b) each person who contributed in a different way (e.g. providing constructive feedback) and who approved of me including them in this list.
