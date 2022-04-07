@@ -1,0 +1,16 @@
+ul{
+    text-align: left;
+    
+}
+
+.main{
+    font-size: large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    min-height: 400px;
+    padding-top: 5%;
+}

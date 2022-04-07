@@ -1,0 +1,55 @@
+.mid {
+text-align: center;
+width: 100%;
+margin: auto;
+padding: 18px 0px;
+    
+}
+
+.navbar{
+display:inline-block;
+}
+
+.navbar li{
+list-style: none;
+display:inline-block;
+margin:auto;
+}
+
+.navbar li a{
+text-decoration: none;
+color:rgb(255, 255, 255);
+font-size: 18px;
+padding:8px 20px;
+}
+
+.navbar li a:active{
+background-color: rgb(255, 255, 255);
+border-radius: 5px;
+}
+
+.left {
+width: 20%;
+padding-top: 32px ;
+color: #ffffff;
+text-align: center;
+float: left;
+}
+
+.logo {
+    
+    float: left;
+    padding: 5px ;
+    padding-left: 20px;
+    width: 5%;
+}
+
+.left a{
+text-decoration:none;
+color: #ffffff;
+font-size: 1vw;
+}
+
+.header{
+    background-color: rgb(66, 66, 66);
+}

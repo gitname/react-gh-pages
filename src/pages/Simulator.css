@@ -1,0 +1,42 @@
+#gallery {
+  grid-area: gallery;
+  display: grid;
+  grid-template-columns:  auto auto auto auto;
+  column-gap: 10px;
+  padding: 1rem;
+  text-align: center;
+  /* margin: 0 auto; */
+}
+
+.img--protanomaly {
+  filter: url('#protanomaly');
+}
+
+.img--protanopia {
+  filter: url('#protanopia');
+}
+
+.img--deuteranomaly {
+  filter: url('#deuteranomaly');
+}
+
+.img--deuteranopia {
+  filter: url('#deuteranopia');
+}
+
+.img--tritanomaly {
+  filter: url('#tritanomaly');
+}
+
+.img--tritanopia {
+  filter: url('#tritanopia');
+}
+
+.img--achromatomaly {
+  filter: url('#achromatomaly');
+}
+
+.img--achromatopsia {
+  filter: url('#achromatopsia');
+}
+
