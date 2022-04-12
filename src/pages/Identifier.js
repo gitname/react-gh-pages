@@ -1,5 +1,6 @@
 import React from 'react';
-const Sheeps = () => {
+
+const Identifier = () => {
     return (
         <div>
             <h3>Sheeps</h3>
@@ -10,4 +11,4 @@ const Sheeps = () => {
         </div>
     );
 }
-export default Sheeps;
+export default Identifier;
