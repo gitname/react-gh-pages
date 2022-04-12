@@ -13,7 +13,7 @@ const Navbar = () => {
             <div class="mid">
                 <ul class="navbar">
                     <li>
-                        <Link to="/simulator">Simulator</Link>
+                        <Link to="/simulator">Color Blindness Simulator</Link>
                     </li>
                     <li>
                         <Link to="/resources">Resources</Link>
