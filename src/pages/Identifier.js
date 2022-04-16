@@ -13,21 +13,16 @@ class Identifier extends Component {
     }
 
     handleChange(value) {
-        const eyeDropper = new this.EyeDropper()
         this.setState({
             imgSrc: value
         });
-        eyeDropper.open()
-            .then(res => {
-                
-            })
     }
 
     updateTextBox(value) {
         this.setState({
             textBoxValue: value
         });
-    }
+    }   
 
     render() {
         return (
@@ -41,9 +36,34 @@ class Identifier extends Component {
                     <br></br><br></br>
                     <img src={this.state.imgSrc} width={500} height={500} objectFit={'scale-down'} />
                 </div>
+                <br></br><br></br>
+                <div>
+                    <button id="start-button">Find Color</button>
+                    <span id="result"></span>
+                </div>
             </div>
         );
     }
+
+    document.getElementById('start-button').addEventListener('click', () =>{
+        const resultElement = document.getElementById('result');
+      
+        if (!window.EyeDropper) {
+          resultElement.textContent = 'Your browser does not support the EyeDropper API';
+          return;
+        }
+      
+        const eyeDropper = new EyeDropper();
+      
+        eyeDropper.open().then(result => {
+          resultElement.textContent = result.sRGBHex;
+          resultElement.style.backgroundColor = result.sRGBHex;
+        }).catch(e => {
+          resultElement.textContent = e;
+        });
+
+      });
+      
 
 }
 export default Identifier;
