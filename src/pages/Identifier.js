@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Identifier.css';
 
+
 class Identifier extends Component {
     constructor() {
         super();
@@ -12,9 +13,14 @@ class Identifier extends Component {
     }
 
     handleChange(value) {
+        const eyeDropper = new this.EyeDropper()
         this.setState({
             imgSrc: value
         });
+        eyeDropper.open()
+            .then(res => {
+                
+            })
     }
 
     updateTextBox(value) {
@@ -32,10 +38,12 @@ class Identifier extends Component {
                     <input type="submit" id="submit-button" value="Submit URL" onClick={(event) => this.handleChange(this.state.textBoxValue)} />
                 </div>
                 <div>
+                    <br></br><br></br>
                     <img src={this.state.imgSrc} width={500} height={500} objectFit={'scale-down'} />
                 </div>
             </div>
         );
     }
+
 }
 export default Identifier;
