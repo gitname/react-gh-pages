@@ -151,7 +151,7 @@ At this point, the  React app's `package.json` file includes deployment scripts.
     You can do that by issuing a command in this format: 
     
     ```shell
-    $ git remote add origin https://github.com/{username}/{repo-name}.git
+    $ git remote add origin git@github.com:{username}/{repo-name}.git
     ```
     
     To customize that command for your situation, replace `{username}` with your GitHub username and replace `{repo-name}` with the name of the GitHub repository you created in Step 1.
@@ -159,7 +159,7 @@ At this point, the  React app's `package.json` file includes deployment scripts.
     In my case, I'll run:
 
     ```shell
-    $ git remote add origin https://github.com/gitname/react-gh-pages.git
+    $ git remote add origin git@github.com:gitname/react-gh-pages.git
     ```
 
     > That command tells Git where I want it to push things whenever I—or the `gh-pages` npm package acting on my behalf—issue the `$ git push` command from within this local Git repository.
