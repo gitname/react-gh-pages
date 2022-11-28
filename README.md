@@ -81,7 +81,7 @@ At this point, your GitHub account contains an empty repository, having the name
 
     That command will create a new folder named `my-app`, which will contain the source code of a React app.
 
-    > In addition to containing the source code of the React app, that folder is also a Git repository. That characteristic of the folder will come into play in Step 6.    
+    > In addition to containing the source code of the React app, that folder is also a Git repository. That characteristic of the folder will come into play in Step 6.
 
 2. Enter the newly-created folder:
   
