@@ -204,7 +204,7 @@ At this point, the React app is accessible to anyone who visits the `homepage` U
 
 ### 9. (Optional) Store the React app's _source code_ on GitHub
 
-In the previous step, the `gh-pages` npm package pushed the distributable version of the React app to a branch named `gh-pages` in the GitHub repository. However, the _source code_ of the React app is not yet stored on GitHub.
+In a previous step, the `gh-pages` npm package pushed the distributable version of the React app to a branch named `gh-pages` in the GitHub repository. However, the _source code_ of the React app is not yet stored on GitHub.
 
 In this step, I'll show you how you can store the source code of the React app on GitHub.
 
