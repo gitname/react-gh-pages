@@ -99,7 +99,7 @@ At this point, there is a React app on your computer and you are in the folder t
 
 ### 3. Install the `gh-pages` npm package
 
-1. Install the [`gh-pages`](https://github.com/tschaub/gh-pages) npm package and designate it as a [development dependency](https://nodejs.dev/learn/npm-dependencies-and-devdependencies):
+1. Install the [`gh-pages`](https://github.com/tschaub/gh-pages) npm package and designate it as a [development dependency](https://docs.npmjs.com/specifying-dependencies-and-devdependencies-in-a-package-json-file):
  
     ```shell
     $ npm install gh-pages --save-dev
