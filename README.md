@@ -2,6 +2,8 @@
 
 \* created using `create-react-app`
 
+\* updated to include vite
+
 # Introduction
 
 In this tutorial, I'll show you how you can create a React app and deploy it to GitHub Pages.
@@ -68,15 +70,23 @@ At this point, your GitHub account contains an empty repository, having the name
 
 1. Create a React app named `my-app`:
 
+   * React-Dev
     > In case you want to use a different name from `my-app` (e.g. `web-ui`), you can accomplish that by replacing all occurrences of `my-app` in this tutorial, with that other name (i.e. `my-app` --> `web-ui`).
-  
     ```shell
     $ npx create-react-app my-app
+    ```
+   * Vite 
+    ```shell
+    $ npm create vite@latest my-app -- --template react
     ```
 
     > That command will create a React app written in JavaScript. To create one written in [TypeScript](https://create-react-app.dev/docs/adding-typescript/#installation), you can issue this command instead:
     > ```shell
     > $ npx create-react-app my-app --template typescript
+    > ```
+    > * Vite
+    > ```shell
+    > $ npm create vite@latest my-app -- --template react-ts
     > ```
 
     That command will create a new folder named `my-app`, which will contain the source code of a React app.
@@ -107,8 +117,9 @@ At this point, there is a React app on your computer and you are in the folder t
 
 At this point, the `gh-pages` npm package is installed on your computer and the React app's dependence upon it is documented in the React app's `package.json` file.
 
-### 4. Add a `homepage` property to the `package.json` file
 
+### 4. Add a `homepage` property to the `package.json` file
+* Via create-react-app
 1. Open the `package.json` file in a text editor.
    
     ```shell
@@ -130,6 +141,19 @@ At this point, the `gh-pages` npm package is installed on your computer and the 
     ```
 At this point, the React app's `package.json` file includes a property named `homepage`.
 
+* Vite
+1. Open the `vite.config.js` file in the text editor and add base.
+
+    ```shell
+    $ vi vite.config.js
+    ```
+    
+    ```diff
+    export default defineConfig({
+   + base:"org-test-pages",  
+    plugins: [react()],
+    })
+    ```
 ### 5. Add deployment scripts to the `package.json` file
 
 1. Open the `package.json` file in a text editor (if it isn't already open in one).
@@ -139,13 +163,21 @@ At this point, the React app's `package.json` file includes a property named `ho
     ```
 
 2. Add a `predeploy` property and a `deploy` property to the `scripts` object:
-
-    ```diff
-    "scripts": {
-    +   "predeploy": "npm run build",
-    +   "deploy": "gh-pages -d build",
-        "start": "react-scripts start",
-        "build": "react-scripts build",
+   * Via create-react-app
+   ```diff
+   "scripts": {
+   +   "predeploy": "npm run build",
+   +   "deploy": "gh-pages -d build",
+       "start": "react-scripts start",
+       "build": "react-scripts build",
+   ```
+   * Vite
+   ```diff
+   "scripts": {
+       "dev": "vite",
+       "build": "vite build",
+    +    "predeploy": "npm run build",
+    +    "deploy": "gh-pages -d dist",
     ```
 
 At this point, the  React app's `package.json` file includes deployment scripts.
@@ -286,6 +318,9 @@ Note: I specified the avatars using HTML because, when I did so using Markdown,
 </a>
 <a href="https://github.com/jackweyhrich" target="_blank" title="jackweyhrich">
   <img src="https://github.com/jackweyhrich.png?size=40" height="40" width="40" alt="jackweyhrich" />
+</a>
+<a href="https://github.com/a-dilmen" target="_blank" title="a-dilmen">
+  <img src="https://github.com/a-dilmen.png?size=40" height="40" width="40" alt="a-dilmen" />
 </a>
 
 This list is maintained manually—for now—and includes (a) each person who submitted a pull request that was eventually merged into `master`, and (b) each person who contributed in a different way (e.g. providing constructive feedback) and who approved of me including them in this list.
