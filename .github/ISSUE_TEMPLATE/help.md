@@ -11,7 +11,7 @@ assignees: ''
 
 Which of these applies to you? _(Select all that apply)_
 
-- [ ] I'm following the tutorial from start to finish
+- [ ] I'm following the tutorial as-written from start to finish
 - [ ] I'm using a custom domain (note: not covered in tutorial)
 - [ ] I'm using React Router (note: not covered in tutorial)
 
@@ -19,7 +19,7 @@ Which of these applies to you? _(Select all that apply)_
 
 Which step of the tutorial do you want someone to help you with? _(Select one)_
 
-- [ ] Step number: __ _(put the number here)_
+- [ ] Step number: _(put the number here)_
 - [ ] Something else
 
 # Links
@@ -31,4 +31,6 @@ Tell us where we can find your code and your GitHub Pages site:
 
 # Everything else
 
-You can put whatever you want into this section.
+_You can put whatever you want into this section._
+
+...
