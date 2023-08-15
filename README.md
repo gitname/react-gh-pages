@@ -229,8 +229,8 @@ In this step, I'll show you how you can store the source code of the React app o
 To use a custom domain for your site, there are 4 main changes to make:
 
 1. Buy a domain & configure the DNS for GitHub Pages:
-  - Reference [the docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
-  - Your DNS configuration should be something like this:
+   - Reference [the docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
+   - Your DNS configuration should be something like this:
 
 |Record Type|Host|Address|TTL|
 |-----------|----|-------|----|
