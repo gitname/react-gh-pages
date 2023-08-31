@@ -30,6 +30,10 @@ jobs:
     - name: Build application
       run: npm run build
 
+    - name: Copy Static Content
+      run: cp -r build/static/
+      # Replace 'path/to/static/folder' with the actual path to your static content
+      
     - name: Deploy to Vercel
       run: npx vercel --confirm -t ${{ secrets.VERCELTOKEN }} -m githubCommitSha=b4a04c48f6af2e174699cf4a5f966e9f294cc1a4 -m githubCommitAuthorName=shahswat12 -m githubCommitAuthorLogin=shahswat12 -m githubDeployment=1 -m githubOrg=shahswat12 -m githubRepo=react-gh-pages -m githubCommitOrg=shahswat12 -m githubCommitRepo=react-gh-pages -m githubCommitMessage="Merge 45e5b13d1c9c8183789dc5e86cd034886168eb00 into 66866294f2264db7bd83b3c5ed1d2e271b278090" -m githubCommitRef=shahswat12-patch-3
       env:
