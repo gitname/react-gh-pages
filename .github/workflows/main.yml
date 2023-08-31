@@ -31,7 +31,7 @@ jobs:
       run: npm run build
 
     - name: Copy Static Content
-      run: cp -r build/static/
+      run: cp -r build/static
       # Replace 'path/to/static/folder' with the actual path to your static content
       
     - name: Deploy to Vercel
