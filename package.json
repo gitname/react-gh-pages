@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "5.0.0",
-  "homepage": "https://gitname.github.io/react-gh-pages",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
