@@ -10,6 +10,11 @@ To create the React app, I'll be using [`create-react-app`](https://create-react
 
 If you follow along with this tutorial, you'll end up with a new React app—hosted on GitHub Pages—which you can then customize.
 
+## Translations
+
+This tutorial has been translated from its original English into the following languages:
+- [Traditional Chinese](https://github.com/gitname/react-gh-pages/issues/167#issuecomment-1925551338) (credit: [@creaper9487](https://github.com/creaper9487))
+
 # Tutorial
 
 ## Prerequisites
