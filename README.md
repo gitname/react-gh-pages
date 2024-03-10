@@ -229,6 +229,35 @@ In this step, I'll show you how you can store the source code of the React app o
 
     > I recommend exploring the GitHub repository at this point. It will have two branches: `master` and `gh-pages`. The `master` branch will contain the React app's source code, while the `gh-pages` branch will contain the distributable version of the React app.
 
+### 10. (Optional) Using a custom domain
+
+To use a custom domain for your site, there are 4 main changes to make:
+
+1. Buy a domain & configure the DNS for GitHub Pages:
+   - Reference [the docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
+   - Your DNS configuration should be something like this:
+
+|Record Type|Host|Address|TTL|
+|-----------|----|-------|----|
+|A Record| @ | 185.199.108.153 | 30 minutes |
+|A Record| @ | 185.199.109.153 | 30 minutes |
+|A Record| @ | 185.199.110.153 | 30 minutes |
+|A Record| @ | 185.199.111.153 | 30 minutes |
+|CNAME Record| www | {username}.github.io | 30 minutes|
+
+> Note: that regardless of whether you are making a project site or a user site, the "www" address will be `{username}.github.io`
+
+2. Configure the domain name in your repository settings
+   1. In your web browser, navigate to the GitHub repository
+   2. In the sidebar, in the "Code and automation" section, click on "Pages"
+   3. In the section for "Custom domain" enter your domain (without any "https://", "http://", or "www.") and click "Save"
+   4. GitHub will now verify the DNS settings for your domain - to verify that they point to GitHub. If you _just_ did the DNS changes moments before, you may have to wait up to an hour for this to work.
+   5. _Optionally:_ check the box for "Enforce HTTPS"
+
+3. The above step will create a CNAME file in the gh-pages branch of your repo. Copy this file into your repo's `public` folder (as per [Preserving the `CNAME` file when using a custom domain](https://github.com/gitname/react-gh-pages/issues/89#issuecomment-1207271670))
+
+4. Finally, open the package.json file in your repo and change the `homepage` prop to your custom domain
+
 # References
 
 1. [The official `create-react-app` deployment guide](https://create-react-app.dev/docs/deployment/#github-pages)
