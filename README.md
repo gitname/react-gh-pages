@@ -245,7 +245,7 @@ If you complete step 9 and this step (step 10) before completing step 7, you can
     on:
       push:
         branches:
-          - main
+          - master
     
     jobs:
       deploy:
