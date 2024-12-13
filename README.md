@@ -229,6 +229,72 @@ In this step, I'll show you how you can store the source code of the React app o
 
     > I recommend exploring the GitHub repository at this point. It will have two branches: `master` and `gh-pages`. The `master` branch will contain the React app's source code, while the `gh-pages` branch will contain the distributable version of the React app.
 
+### 10. (Optional) Automate deploying the React app when _source code_ is pushed to `master` branch
+
+In a previous step, the source code of the React app is pushed to GitHub. 
+
+In this step, I'll show you how you can set up a GitHub workflow to automate running the command that pushes the distributable version of the React app to the `gh-pages` branch in the GitHub repository. Setting this up will cause pushing updated source code to the `master` branch to trigger the command `npm run deploy -- -m "Deploy React app to GitHub Pages"` from step 7 to run. 
+
+If you complete step 9 and this step (step 10) before completing step 7, you can then complete step 8 and forego completing step 7 as will be run automatically.
+
+1. In the top-level the directory storing your React app source code, add a file at the path `.github\workflows\deploy.yml`. In this file, copy the following code:
+
+    ```yml
+    name: Deploy React App
+
+    on:
+      push:
+        branches:
+          - master
+    
+    jobs:
+      deploy:
+        runs-on: ubuntu-latest
+    
+        steps:
+        - name: Checkout repository
+          uses: actions/checkout@v2
+    
+        - name: Set up Node.js
+          uses: actions/setup-node@v2
+          with:
+            node-version: '14'
+    
+        - name: Install dependencies
+          run: npm install
+          env:
+            CI: false
+    
+        - name: Configure Git
+          run: |
+            git config --local user.name "${{ github.actor }}"
+            git config --local user.email "${{ github.actor }}@users.noreply.github.com"
+            git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+    
+        - name: Run deploy script
+          run: npm run deploy -- -m "Deploy React app to GitHub Pages"
+          env:
+            CI: false
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    ```
+    
+2. Allow workflow to have write permissions to the repository:  
+    1. Navigate to the **General Actions** settings page
+       1. In your web browser, navigate to the GitHub repository
+       1. Above the code browser, click on the tab labeled "Settings"
+       1. In the sidebar, in the "Code and automation" section, click on "Actions" > "General"
+    1. Configure the "Workflow permissions" settings like this: 
+       1. Select the "Read and write permissions" option
+    1. Click on the "Save" button
+
+3. Push the updated source code with the deploy workflow to the GitHub repository.  
+   
+   ```shell
+   $ git add .
+   $ git commit -m "Created workflow to automate deployment to GitHub Pages on pushes to master"
+   $ git push origin master
+   ```
+
 # References
 
 1. [The official `create-react-app` deployment guide](https://create-react-app.dev/docs/deployment/#github-pages)
