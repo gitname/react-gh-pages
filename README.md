@@ -152,6 +152,17 @@ At this point, the React app's `package.json` file includes a property named `ho
         "start": "react-scripts start",
         "build": "react-scripts build",
     ```
+      > \* To deploy code from `master` change the following settings in your package.json
+      ```diff
+      "scripts": {
+      -     "deploy": "gh-pages -d build",
+      +     "deploy": "gh-pages -b master -d build",
+      ```
+      > \* Check settings in Github (Repo -> Settings -> Pages)
+     - **Source** in **Build and deployment** should be ***Deploy from a Branch*** 
+     -  **Branch** should be selected to `master`
+     -  **Folder** `/ (root)`
+     -  After this follow the remaining instructions provided below **excluding point # 8**
 
 At this point, the  React app's `package.json` file includes deployment scripts.
 
@@ -204,7 +215,7 @@ At this point, the GitHub repository contains a branch named `gh-pages`, which c
    1. In the sidebar, in the "Code and automation" section, click on "Pages"
 1. Configure the "Build and deployment" settings like this: 
    1. **Source**: Deploy from a branch
-   2. **Branch**: 
+   2. **Branch**:
       - Branch: `gh-pages`
       - Folder: `/ (root)`
 1. Click on the "Save" button
